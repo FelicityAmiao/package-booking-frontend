@@ -31,8 +31,6 @@ export default {
         .then(response => {
           this.axios.get("http://localhost:8086/packages").then(response => {
             this.$store.commit("setPackagesData", response.data);
-            this.$store.commit("setFormData", {});
-            this.$store.commit("setDialogVisible", false);
           });
         })
         .catch(error => {
